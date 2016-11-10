@@ -30,24 +30,18 @@ describe("Manufacturing plant", function(){
 });
 
 
-describe('Iterative Cortex', () => {
-  it('knows how to iterate', () => {
-    // The spaceship is going to be going over some loops, so it better know how
-    // to iterate dynamically!
-    //
-    // I want to add all the numbers in this array together, but I can't get the
-    // iterator to stop once i've hit he last item in the array! I've got it
-    // stopping at 40 loops, and I *could* do it manually, but I need to make
-    // sure it stops no matter *what* size the array is!
-    //
+describe("Iterative Cortex", function(){
+  it("knows how to iterate", function(){
+    // The spaceship is going to be going over some loops, so it better know how to iterate dynamically!
+    // I want to add all the numbers in this array together, but I can't get the iterator to stop once i've hit he last item in the array! I've got it stopping at 40 loops, and I *could* do it manually, but I need to make sure it stops no matter *what* size the array is!
     // Thanks! - Sleepy Jerry
 
-    let array = [1, 1, 2, 3, 5, 8];
-    let length = 40;
-    let total = 0;
+    var array = [1, 1, 2, 3, 5, 8];
+    var length = 40;
+    var total = 0;
 
-    for(let i = 0; i < length; i++){
-      total  = total + array[i]
+    for(var i = 0; i < array.length; i++){
+      total += array[i]
     }
     expect(total).toEqual(20);
   });
