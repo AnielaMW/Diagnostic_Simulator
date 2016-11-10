@@ -2,8 +2,8 @@ let Jasmine = require('jasmine');
 let jasmine = new Jasmine();
 // This here is the important stuff! I wouldn't mess with this. - Jerry
 
-describe('Communications System', () => {
-  it('is fully operational', () => {
+describe('Communications System', function(){
+  it('is fully operational', function(){
     // Can't get far if the ship can't talk back!  - J
     //
     spyOn(console, 'log')
