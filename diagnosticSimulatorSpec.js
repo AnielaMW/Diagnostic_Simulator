@@ -47,29 +47,28 @@ describe("Iterative Cortex", function(){
   });
 });
 
-describe('Functional Mainframe', () => {
-  // This last part is *very* important. If the spaceship can't run basic logic,
-  // then we'll never get to the stars! - Jerbear
+describe("Functional Mainframe", function(){
+  // This last part is *very* important. If the spaceship can't run basic logic, then we'll never get to the stars! - Jerbear
 
-  it('knows how functions are called', () => {
-    result = null;
-    let testResult = () => {
+  it("knows how functions are called", function(){
+    var result = null;
+    var testResult = function(){
       result = 4;
     };
 
     // I call the function, why isn't result being changed???
-    testResult;
+    testResult();
 
     expect(result).toEqual(4);
   });
-  it('knows how functions return', () => {
+  it("knows how functions return", function(){
 
-    let testAdder = () => {
+    var testAdder = function(){
       // I'm more used to Ruby, honestly. Why isn't this passing?
-      2 + 2
+      return 2 + 2
     };
 
-    let four = testAdder();
+    var four = testAdder();
     expect(four).toEqual(4);
   });
 });
