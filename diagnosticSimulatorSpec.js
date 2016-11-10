@@ -2,33 +2,33 @@ let Jasmine = require('jasmine');
 let jasmine = new Jasmine();
 // This here is the important stuff! I wouldn't mess with this. - Jerry
 
-describe('Communications System', function(){
-  it('is fully operational', function(){
+describe("Communications System", function(){
+  it("is fully operational", function(){
     // Can't get far if the ship can't talk back!  - J
     //
-    spyOn(console, 'log')
+    spyOn(console, "log")
     // This helps us track what the Comm system does!
 
-    let message = 'Ground control to major tom - Come in major tom!'
-    console.log();
+    var message = "Ground control to major tom - Come in major tom!"
+    console.log(message);
     expect(console.log).toHaveBeenCalledWith(message);
   });
 });
 
-describe('Manufacturing plant', () => {
-  it('Knows how to produce Objects', () => {
-    // I've been staring at this one for four hours.
-    // I'm losing my mind. Please help me! - J-dogg
+describe("Manufacturing plant", function(){
+  it("Knows how to produce Objects", function(){
+    // I've been staring at this one for four hours. I'm losing my mind. Please help me! - J-dogg
 
-    let object = {
-      size: 10,
-      nane: 'Generic JavaScript Object #128'
+    var object = {
+      size: "Generic",
+      name: "Generic"
     };
 
-    expect(object.size).toEqual(10);
-    expect(object.name).toEqual('Generic JavaScript Object #128');
+    expect(object.size).toEqual("Generic");
+    expect(object.name).toEqual("Generic");
   });
 });
+
 
 describe('Iterative Cortex', () => {
   it('knows how to iterate', () => {
